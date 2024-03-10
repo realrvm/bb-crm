@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* FONT FAMILY */
+    --font-family: Inter, system-ui, sans-serif;
+
+    /* COLORS */
+    --color-primary: #0b1022;
+    --color-secondary: #7d7d7d;
+    --color-white: #fff;
+    --color-brand: #064cff;
+    --color-deny: #e92c2c;
+    --color-accent: #0fc040;
+    --color-annonce: #fff5e1;
+    --color-tab-bg: #edf3fc;
+  }
+}
+
+@layer base {
+  body {
+    @apply font-inter;
+  }
+}
+
+@layer components {
+  .text-small {
+    @apply text-sm font-normal leading-5;
+  }
+
+  .text-medium {
+    @apply text-base font-normal leading-6;
+  }
+
+  .text-large {
+    @apply text-xl font-normal leading-8;
+  }
+
+  .heading-6 {
+    @apply text-sm font-semibold leading-5;
+  }
+
+  .heading-5 {
+    @apply text-base font-semibold leading-6;
+  }
+
+  .heading-4 {
+    @apply text-xl font-bold leading-7;
+  }
+
+  .heading-3 {
+    @apply text-2xl font-bold leading-8;
+  }
+
+  .heading-2 {
+    @apply text-4xl font-bold leading-[48px];
+  }
+
+  .heading-1 {
+    @apply text-5xl font-bold leading-[56px];
+  }
+}
