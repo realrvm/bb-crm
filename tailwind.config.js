@@ -50,6 +50,9 @@ export default {
       steps: {
         DEFAULT: "var(--color-steps)",
       },
+      border: {
+        DEFAULT: "var(--color-border)",
+      },
     },
   },
   plugins: [],

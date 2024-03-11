@@ -5,6 +5,13 @@ export const enum Routes {
   SETTINGS = "/settings",
 }
 
+export const enum ButtonThemes {
+  PRIMARY = "btn-primary",
+  DENY = "btn-deny",
+  ACCENT = "btn-accent",
+  ICON = "btn-icon",
+}
+
 type TabCaption = "Заявки" | "Aктивные займы" | "Финансы" | "Настройки";
 
 export type Tab = {

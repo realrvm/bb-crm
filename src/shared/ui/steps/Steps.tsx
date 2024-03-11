@@ -7,7 +7,7 @@ type StepsProps = {
 
 export const Steps: FC<StepsProps> = ({ step }) => {
   return (
-    <div className="flex align-center gap-1">
+    <div className="flex items-center gap-1">
       {Array.from({ length: 7 }).map((_, index) => {
         return (
           <div

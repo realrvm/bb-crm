@@ -20,6 +20,7 @@
     --color-tab-bg: #edf3fc;
     --color-hover: #f4f4f4;
     --color-steps: #e8e8e8;
+    --color-border: #e2e2e2;
   }
 }
 
@@ -64,5 +65,25 @@
 
   .heading-1 {
     @apply text-5xl font-bold leading-[56px];
+  }
+
+  .btn {
+    @apply rounded-lg px-5 py-3 border border-solid heading-5;
+  }
+
+  .btn-primary {
+    @apply btn border-brand text-white bg-brand;
+  }
+
+  .btn-deny {
+    @apply btn border-deny text-deny;
+  }
+
+  .btn-accent {
+    @apply btn border-accent text-accent;
+  }
+
+  .btn-icon {
+    @apply rounded-lg py-1.5 px-3 border border-solid heading-6 text-primary border-border flex gap-2 items-center;
   }
 }
