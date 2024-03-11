@@ -3,6 +3,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    extend: {
+      backgroundImage: {
+        logo: "url(/logo.svg)",
+        exit: "url(/exit.svg)",
+      },
+    },
     fontFamily: {
       inter: "var(--font-family)",
     },
@@ -35,8 +41,14 @@ export default {
       annonce: {
         DEFAULT: "var(--color-annonce)",
       },
-      "tab-bg": {
+      tab: {
         DEFAULT: "var(--color-tab-bg)",
+      },
+      hover: {
+        DEFAULT: "var(--color-hover)",
+      },
+      steps: {
+        DEFAULT: "var(--color-steps)",
       },
     },
   },
