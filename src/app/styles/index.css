@@ -26,7 +26,7 @@
 
 @layer base {
   body {
-    @apply font-inter;
+    @apply font-inter relative;
   }
 }
 
@@ -60,7 +60,7 @@
   }
 
   .heading-2 {
-    @apply text-4xl font-bold leading-[48px];
+    @apply text-[28px] font-bold leading-[32px];
   }
 
   .heading-1 {
@@ -68,7 +68,7 @@
   }
 
   .btn {
-    @apply rounded-lg px-5 py-3 border border-solid heading-5;
+    @apply rounded-lg px-5 py-3 border border-solid heading-5 outline-none focus:border-brand active:border-brand hover:border-brand;
   }
 
   .btn-primary {
@@ -84,6 +84,10 @@
   }
 
   .btn-icon {
-    @apply rounded-lg py-1.5 px-3 border border-solid heading-6 text-primary border-border flex gap-2 items-center;
+    @apply rounded-lg py-1.5 px-3 border border-solid heading-6 text-primary border-border flex gap-3 items-center outline-none focus:border-brand active:border-brand hover:border-brand self-start;
+  }
+
+  .btn-default {
+    @apply btn border-border;
   }
 }
