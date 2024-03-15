@@ -14,6 +14,7 @@
     --color-secondary: #7d7d7d;
     --color-white: #fff;
     --color-brand: #064cff;
+    --color-brand-dark: #0034b9;
     --color-deny: #e92c2c;
     --color-accent: #0fc040;
     --color-annonce: #fff5e1;
@@ -21,6 +22,7 @@
     --color-hover: #f4f4f4;
     --color-steps: #e8e8e8;
     --color-border: #e2e2e2;
+    --color-focus: #0f0f0f;
   }
 }
 
@@ -68,26 +70,26 @@
   }
 
   .btn {
-    @apply rounded-lg px-5 py-3 border border-solid heading-5 outline-none focus:border-brand active:border-brand hover:border-brand;
+    @apply rounded-lg px-5 py-3 border border-solid heading-5 outline-none focus:border-focus;
   }
 
   .btn-primary {
-    @apply btn border-brand text-white bg-brand;
+    @apply btn border-brand text-white bg-brand hover:bg-brand_dark;
   }
 
   .btn-deny {
-    @apply btn border-deny text-deny;
+    @apply btn border-deny text-deny hover:bg-deny hover:text-white;
   }
 
   .btn-accent {
-    @apply btn border-accent text-accent;
+    @apply btn border-accent text-accent hover:bg-accent hover:text-white;
   }
 
   .btn-icon {
-    @apply rounded-lg py-1.5 px-3 border border-solid heading-6 text-primary border-border flex gap-3 items-center outline-none focus:border-brand active:border-brand hover:border-brand self-start;
+    @apply rounded-lg py-1.5 px-3 border border-solid heading-6 text-primary border-border flex gap-3 items-center outline-none focus:border-focus hover:bg-border self-start;
   }
 
   .btn-default {
-    @apply btn border-border;
+    @apply btn border-border hover:bg-border;
   }
 }

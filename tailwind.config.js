@@ -32,6 +32,9 @@ export default {
       brand: {
         DEFAULT: "var(--color-brand)",
       },
+      brand_dark: {
+        DEFAULT: "var(--color-brand-dark)",
+      },
       deny: {
         DEFAULT: "var(--color-deny)",
       },
@@ -52,6 +55,9 @@ export default {
       },
       border: {
         DEFAULT: "var(--color-border)",
+      },
+      focus: {
+        DEFAULT: "var(--color-focus)",
       },
     },
   },
