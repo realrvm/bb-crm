@@ -117,7 +117,7 @@ const ApplicationAgentWorkModalButtons: FC<{ toggleModal: () => void }> = memo(
         </button>
         <button className="border border-border outline-none flex flex-col rounded-lg p-4 gap-2 focus:border-focus hover:bg-border">
           <div className="grid place-items-center w-10 h-10 rounded-full bg-hover">
-            <Contract />
+            <Contract theme="dark" />
           </div>
           <span className="text-left heading-5">Договор с клиентом</span>
         </button>
