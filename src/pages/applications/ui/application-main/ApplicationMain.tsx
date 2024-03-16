@@ -24,7 +24,7 @@ type OptionType = {
   value: string;
 };
 
-// моковые данные. Потом удалить
+// моковые данные. Потом переписать && удалить
 const applicationsArray: ApplicationType[] = [
   {
     uid: 1,
@@ -78,7 +78,7 @@ const applicationsArray: ApplicationType[] = [
     phone: "+7 (924) 114 44 23	",
     sum: "20 000",
     term: "24",
-    step: "-",
+    step: "8",
   },
   {
     uid: 7,

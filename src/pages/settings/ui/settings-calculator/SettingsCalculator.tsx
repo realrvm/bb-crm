@@ -59,13 +59,15 @@ const SettingsCalculatorContent: FC = () => {
   const [checkComission, setCheckComission] = useState(false);
   const [checkPercents, setCheckPercents] = useState(false);
 
-  const { register, handleSubmit, errors } = useAppForm();
+  const { register, handleSubmit, errors, setValue } = useAppForm();
 
   const handleCheckComission = (state: boolean) => {
+    setValue("commission", state);
     setCheckComission(state);
   };
 
   const handleCheckPercents = (state: boolean) => {
+    setValue("percentage", state);
     setCheckPercents(state);
   };
 
@@ -83,6 +85,9 @@ const SettingsCalculatorContent: FC = () => {
               <Input
                 placeholder={placeholder.toString()}
                 label={label}
+                addClasses={
+                  errors[key]?.message ? "border-deny" : "border-border"
+                }
                 {...register(key)}
               />
               {errors[key] && (
@@ -96,14 +101,14 @@ const SettingsCalculatorContent: FC = () => {
         <Checkbox
           label="Разбить комиссию при выдаче в ежемесячные платежи"
           handleCheck={handleCheckComission}
-          name="comission"
           checked={checkComission}
+          name="comission"
         />
         <Checkbox
           label="Начислять проценты на последний взнос"
           handleCheck={handleCheckPercents}
-          name="percents"
           checked={checkPercents}
+          name="percentage"
         />
       </div>
       <SimpleButton type="submit" addClasses="w-full">

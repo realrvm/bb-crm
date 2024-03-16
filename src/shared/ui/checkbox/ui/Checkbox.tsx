@@ -1,15 +1,18 @@
-import { ComponentPropsWithoutRef, FC, memo } from "react";
+import { ComponentPropsWithoutRef, FC, forwardRef } from "react";
 import clsx from "clsx";
 
 import styles from "./styles.module.css";
 
 type CheckboxProps = {
-  isChecked?: boolean;
   label: string;
+  isChecked?: boolean;
   handleCheck: (value: boolean) => void;
 } & ComponentPropsWithoutRef<"input">;
 
-export const Checkbox: FC<CheckboxProps> = memo((props) => {
+export const Checkbox: FC<CheckboxProps> = forwardRef<
+  HTMLInputElement,
+  Omit<CheckboxProps, "ref">
+>((props, ref) => {
   const { isChecked = false, label, handleCheck, ...rest } = props;
 
   return (
@@ -19,6 +22,7 @@ export const Checkbox: FC<CheckboxProps> = memo((props) => {
         className={clsx(styles["checkbox"], { [styles["checked"]]: isChecked })}
         checked={isChecked}
         onChange={(e) => handleCheck(e.target.checked)}
+        ref={ref}
         {...rest}
       />
       <span>{label}</span>

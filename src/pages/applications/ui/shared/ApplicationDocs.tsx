@@ -42,12 +42,12 @@ const ApplicationDocsForm: FC<{ isShowBtns?: boolean }> = ({
           <Input
             label="ФИО"
             placeholder="Иванов Иван Иванович"
-            addClasses="col-span-2"
+            addStyles="col-span-2"
           />
           <Input
             label="Серия и номер паспорта"
             placeholder="0000 000000"
-            addClasses="col-span-1"
+            addStyles="col-span-1"
           />
         </div>
         <div className="grid grid-cols-3 gap-3 mb-4">

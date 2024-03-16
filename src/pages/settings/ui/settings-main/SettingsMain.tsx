@@ -7,6 +7,7 @@ import { Pen } from "@/shared/assets/icons/Pen";
 
 export const SettingsMain: FC = () => {
   const navigate = useNavigate();
+
   return (
     <div className="mt-9">
       <Title title="Шаблоны документов" />

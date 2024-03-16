@@ -17,6 +17,7 @@ export const Wrapper: FC<PropsWithChildren<WrapperType>> = memo(
   ({ step, children, application_id, childElement }) => {
     const status = getApplicationStatus(step);
     const hasAppliction = step !== "0";
+    const isRefusal = step === "8";
 
     return (
       <>
@@ -28,10 +29,11 @@ export const Wrapper: FC<PropsWithChildren<WrapperType>> = memo(
             <div className="flex items-center justify-between">
               <Title title={`Заявка #${application_id}`} />
               <div className="flex items-center gap-3">
-                <Steps step={step} />
+                {isRefusal ? null : <Steps step={step} />}
                 <span
                   className={cn("heading-5", {
                     "text-accent": status === "Новая",
+                    "text-deny": status === "Отказ",
                   })}
                 >
                   {status}
@@ -39,7 +41,7 @@ export const Wrapper: FC<PropsWithChildren<WrapperType>> = memo(
               </div>
             </div>
           ) : (
-            <Title title={application_id} addClasses='text-center' />
+            <Title title={application_id} addClasses="text-center" />
           )}
           {children}
         </div>

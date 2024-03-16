@@ -8,6 +8,8 @@ export type SettingsCalculatorType = {
   commission_monthly: string;
   monthly_insurance: string;
   last_installment: string;
+  commission?: boolean;
+  percentage?: boolean;
 };
 
 const SettingsCalculatorSchema: ZodType<SettingsCalculatorType> = z.object({
@@ -16,16 +18,19 @@ const SettingsCalculatorSchema: ZodType<SettingsCalculatorType> = z.object({
   commission_monthly: z.string(),
   monthly_insurance: z.string(),
   last_installment: z.string(),
+  commission: z.boolean().optional(),
+  percentage: z.boolean().optional(),
 });
 
 export const useAppForm = () => {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm<SettingsCalculatorType>({
     resolver: zodResolver(SettingsCalculatorSchema),
   });
 
-  return { register, handleSubmit, errors };
+  return { register, setValue, handleSubmit, errors };
 };

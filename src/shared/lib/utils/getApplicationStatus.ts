@@ -1,6 +1,6 @@
-import { AppRoutes } from "../types";
+import { AppRoutes } from "@/shared/lib/types";
 
-export function getApplicationStatus(step: string) {
+export function getApplicationStatus(step: string): string {
   switch (step) {
     case "1":
       return "Новая";
@@ -16,12 +16,14 @@ export function getApplicationStatus(step: string) {
       return "Проверка данных";
     case "7":
       return "Работа агента";
-    default:
+    case "8":
       return "Отказ";
+    default:
+      return "";
   }
 }
 
-export function getStatusByApplication(status: string) {
+export function getStatusByApplication(status: string): string {
   switch (status) {
     case "Новая":
       return "1";
@@ -37,6 +39,8 @@ export function getStatusByApplication(status: string) {
       return "6";
     case "Работа агента":
       return "7";
+    case "Отказ":
+      return "8";
     default:
       return "-";
   }
@@ -58,7 +62,9 @@ export function getPathsByStep(step: string): AppRoutes {
       return AppRoutes.DATA_CHECKING;
     case "7":
       return AppRoutes.AGENT_WORK;
+    case "8":
+      return AppRoutes.REFUSAL;
     default:
-      return AppRoutes.DEFAULT;
+      return AppRoutes.MAIN;
   }
 }
