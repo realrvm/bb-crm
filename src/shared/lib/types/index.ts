@@ -13,7 +13,13 @@ export const enum AppRoutes {
   APPROVED = "approved",
   DATA_CHECKING = "data-checking",
   AGENT_WORK = "agent-work",
-  DEFAULT = "/",
+  REFUSAL = "refusal",
+  MAIN = "",
+}
+
+export const enum SettingsRoutes {
+  MAIN = "",
+  CALCULATOR = "calculator",
 }
 
 export const enum ButtonThemes {
